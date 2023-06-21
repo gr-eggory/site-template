@@ -20,11 +20,9 @@
 </script>
 
 <div class="layout-grid">
-	<div class="sidebar-wrapper">
-		<!-- TODO -->
-		<!-- <Sidebar {popularPosts} {allCategories} /> -->
-		sidebar
-	</div>
+	<!-- <div class="sidebar-wrapper">
+		<Sidebar {popularPosts} {allCategories} />
+	</div> -->
 
 	<slot />
 </div>
