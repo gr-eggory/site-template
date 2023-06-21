@@ -9,7 +9,7 @@
 			const theme = localStorage.getItem('color-scheme');
 
 			theme
-				? document.documentElement.setAttribute('color-scheme', theme)
+				? document.documentElement.setAttribute('data-theme', theme)
 				: localStorage.setItem('color-scheme', 'dark');
 		</script>
 		%sveltekit.head%
