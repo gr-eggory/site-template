@@ -3,10 +3,11 @@ export default interface Post {
 	date: string;
 	description: string;
 	categories: string[];
+	slug: string;
+	published: boolean;
 	coverImage: string;
 	coverWidth?: number;
 	coverHeight?: number;
-	slug: string;
 	subtitle?: string;
 	updated?: string;
 }
@@ -14,7 +15,7 @@ export default interface Post {
 export type Frontmatter = {
 	title: string;
 	description: string;
-	published: string;
-	category: string;
+	categories: string;
 	date: string;
+	published: string;
 };
