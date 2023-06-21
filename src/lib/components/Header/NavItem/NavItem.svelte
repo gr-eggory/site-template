@@ -3,8 +3,7 @@
 
 	export let href: string;
 
-	$: isCurrentPage = $page.url.pathname === href;
-	$: console.log('page', page);
+	$: isCurrentPage = $page.url.pathname.startsWith(href);
 </script>
 
 <li>
