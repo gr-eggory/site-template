@@ -5,7 +5,9 @@
 
 <header>
 	<nav>
-		<span>{siteConfig.title}</span>
+		<a href="/">
+			<h3 class="site-name">{siteConfig.title}</h3>
+		</a>
 		<ul>
 			{#each navItems as { route, title } (route)}
 				<NavItem href={route}>{title}</NavItem>
@@ -15,10 +17,18 @@
 </header>
 
 <style>
+	header {
+		padding: var(--spacing-16);
+	}
 	nav {
 		display: flex;
 		justify-content: space-between;
 	}
+
+	.site-name {
+		color: var(--clr-primary);
+	}
+
 	ul {
 		display: flex;
 		gap: 2rem;
