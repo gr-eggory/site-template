@@ -10,7 +10,7 @@ const fetchPosts = async ({
 	let posts: Post[];
 
 	posts = await Promise.all(
-		Object.entries(import.meta.glob(`../../../content/posts/*.md`)).map(async ([path, page]) => {
+		Object.entries(import.meta.glob(`../content/posts/*.md`)).map(async ([path, page]) => {
 			const { metadata } = await page();
 			const slug = path.split('/').pop().split('.').shift();
 			return { ...metadata, slug };
@@ -41,6 +41,7 @@ const fetchPosts = async ({
 		categories: post.categories,
 		coverImage: post.coverImage,
 		slug: post.slug,
+		published: post.published,
 	}));
 
 	return finalPosts;
