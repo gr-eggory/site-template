@@ -4,7 +4,7 @@ description: "this is Amadeus' post"
 categories:
   - 'cats'
 date: '2023-06-19'
-published: false
+published: true
 ---
 
 # Amadeus!

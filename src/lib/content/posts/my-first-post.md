@@ -4,7 +4,7 @@ title: My First Post
 categories:
   - demo
 date: '2023-06-17'
-published: false
+published: true
 ---
 
 # Hello
