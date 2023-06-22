@@ -1,5 +1,6 @@
 <script>
 	import { navItems, siteConfig } from '$lib/config';
+	import LightModeToggle from '../LightModeToggle/LightModeToggle.svelte';
 	import NavItem from './NavItem/NavItem.svelte';
 </script>
 
@@ -8,6 +9,7 @@
 		<a href="/">
 			<h3 class="site-name">{siteConfig.title}</h3>
 		</a>
+		<LightModeToggle />
 		<ul>
 			{#each navItems as { route, title } (route)}
 				<NavItem href={route}>{title}</NavItem>
