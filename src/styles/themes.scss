@@ -1,4 +1,4 @@
-html[data-theme='dark'] {
+html[color-theme='dark'] {
 	/* Global */
 	--clr-primary: hsl(147 58% 37%);
 	--clr-txt: hsl(0 0% 98%);
@@ -61,7 +61,7 @@ html[data-theme='dark'] {
 	--clr-token-5: hsl(173 10% 60%);
 }
 
-html[data-theme='light'] {
+html[color-theme='light'] {
 	/* Global */
 	--clr-primary: hsl(157, 55%, 33%);
 	--clr-txt: hsl(220 10% 10%);
