@@ -27,22 +27,24 @@
 	</div>
 </Main> -->
 
-<ul>
-	{#each posts as post (post.title)}
-		<li>
-			<article>
-				<a href="/blog/{post.slug}">
-					<!-- img goes here -->
-					<h2>
-						{post.title}
-					</h2>
-					<p>{post.description}</p>
-					<p>Created on {post.date}</p>
-				</a>
-			</article>
-		</li>
-	{/each}
-</ul>
+<main>
+	<ul>
+		{#each posts as post (post.title)}
+			<li>
+				<article>
+					<a href="/blog/{post.slug}">
+						<!-- img goes here -->
+						<h2>
+							{post.title}
+						</h2>
+						<p>{post.description}</p>
+						<p>Created on {post.date}</p>
+					</a>
+				</article>
+			</li>
+		{/each}
+	</ul>
+</main>
 
 <style lang="scss">
 </style>
