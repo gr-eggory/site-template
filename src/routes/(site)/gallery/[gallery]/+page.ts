@@ -1,16 +1,16 @@
-import { galleries } from '$lib/config';
 import { error } from '@sveltejs/kit';
 
-export const load = async ({ params }) => {
-	const { gallery } = params;
+import type { Gallery } from '$lib/types/gallery.js';
 
-	const selectedGallery = galleries.find(({ slug }) => slug === gallery);
+export const load = async ({ params, fetch }) => {
+	const res = await fetch(`/api/gallery/${params.gallery}`);
+	const gallery = (await res.json()) as Gallery;
 
-	if (!selectedGallery) {
-		throw error(404, `Could not find ${gallery}`);
+	if (!gallery) {
+		throw error(404, `Could not find ${params.gallery}`);
 	}
 
 	return {
-		gallery: selectedGallery,
+		gallery,
 	};
 };
