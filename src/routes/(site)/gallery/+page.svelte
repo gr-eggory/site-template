@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { galleries } from '$lib/config';
+	export let data;
+
+	const { galleries } = data;
 </script>
 
 <main>
