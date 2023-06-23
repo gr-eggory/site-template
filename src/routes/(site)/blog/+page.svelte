@@ -1,15 +1,16 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { siteConfig } from '$lib/config';
+	import Pagination from '$lib/components/Pagination/Pagination.svelte';
 	import type Post from '$lib/types/post';
+	import PostsList from '$lib/components/PostsList/PostsList.svelte';
 
 	// import Main from '$lib/components/Main.svelte';
-	// import Pagination from '$lib/components/Pagination.svelte';
 	// import PostList from '$lib/components/posts/PostList.svelte';
 
 	export let data: PageData;
 	let posts = data.posts || [];
-	let totalPosts = data.totalPosts.total;
+	let totalPosts = data.total;
 </script>
 
 <svelte:head>
@@ -28,22 +29,9 @@
 </Main> -->
 
 <main>
-	<ul>
-		{#each posts as post (post.title)}
-			<li>
-				<article>
-					<a href="/blog/{post.slug}">
-						<!-- img goes here -->
-						<h2>
-							{post.title}
-						</h2>
-						<p>{post.description}</p>
-						<p>Created on {post.date}</p>
-					</a>
-				</article>
-			</li>
-		{/each}
-	</ul>
+	<PostsList {posts} />
+
+	<Pagination currentPage={1} {totalPosts} />
 </main>
 
 <style lang="scss">
