@@ -1,10 +1,12 @@
-import type Post from '../types/post';
-import type PostsEndpointOptions from '../types/PostsEndpointOptions';
 import { dev } from '$app/environment';
+
+import { postsPerPage } from '$lib/config';
+import type PostsEndpointOptions from '../types/PostsEndpointOptions';
+import type Post from '../types/post';
 
 const fetchPosts = async ({
 	offset = 0,
-	limit = 10,
+	limit = postsPerPage,
 	category = '',
 }: PostsEndpointOptions = {}): Promise<Post[]> => {
 	let posts: Post[];
