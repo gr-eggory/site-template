@@ -4,7 +4,7 @@ import type { Gallery } from './types/gallery';
 export const siteConfig = {
 	title: 'My Cool Site',
 	description: 'An Easy to Use Site Template',
-	url: 'https://generic-site-template.vercel.app/',
+	url: 'https://generic-site-template.vercel.app',
 	link: 'https://github.com/gr-eggory/site-template',
 	author: 'Amadeus',
 };
