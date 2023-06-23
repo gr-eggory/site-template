@@ -17,7 +17,7 @@
 					<li>
 						<a href="/blog/page/{page}" aria-current={isCurrentPage(page)}>
 							{#if isCurrentPage(page)}
-								<span> Current page </span>
+								<span>Current page</span>
 							{:else}
 								<span>Go to page</span>
 							{/if}
