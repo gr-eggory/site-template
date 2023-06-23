@@ -1,11 +1,12 @@
 import { json } from '@sveltejs/kit';
 
+import { postsPerPage } from '$lib/config.js';
 import fetchPosts from '$lib/utils/fetchPosts.js';
 import type PostsEndpointOptions from '$lib/types/PostsEndpointOptions.js';
 
 export const GET = async ({ params }): Promise<Response> => {
 	const options: PostsEndpointOptions = {
-		offset: 10,
+		offset: postsPerPage,
 	};
 
 	if (params.offset) {

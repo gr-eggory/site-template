@@ -1,9 +1,11 @@
 <script lang="ts">
+	import { postsPerPage } from '$lib/config';
+
 	export let currentPage: number;
 	export let totalPosts: number;
 
 	let pagesAvailable: number;
-	$: pagesAvailable = Math.ceil(totalPosts / 10);
+	$: pagesAvailable = Math.ceil(totalPosts / postsPerPage);
 
 	const isCurrentPage = (page: number): boolean => page === currentPage;
 </script>
@@ -16,11 +18,6 @@
 				{#each Array.from({ length: pagesAvailable }, (_, i) => i + 1) as page}
 					<li>
 						<a href="/blog/page/{page}" aria-current={isCurrentPage(page)}>
-							{#if isCurrentPage(page)}
-								<span>Current page</span>
-							{:else}
-								<span>Go to page</span>
-							{/if}
 							{page}
 						</a>
 					</li>
