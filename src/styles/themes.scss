@@ -1,6 +1,11 @@
 html[color-theme='dark'] {
 	/* Global */
 	--clr-primary: hsl(147 58% 37%);
+	--clr-secondary: hsl(208, 43%, 59%);
+
+	--clr-tertiary: hsl(27, 47%, 43%);
+	--clr-tertiary-contrast-txt: hsl(32, 100%, 97%);
+
 	--clr-txt: hsl(0 0% 98%);
 	--clr-bg: hsl(0, 0%, 21%);
 
@@ -64,8 +69,13 @@ html[color-theme='dark'] {
 html[color-theme='light'] {
 	/* Global */
 	--clr-primary: hsl(157, 55%, 33%);
+	--clr-secondary: hsl(208, 43%, 59%);
+
+	--clr-tertiary: hsl(27, 47%, 43%);
+	--clr-tertiary-contrast-txt: hsl(32, 100%, 97%);
+
 	--clr-txt: hsl(220 10% 10%);
-	--clr-bg: hsl(0 0% 98%);
+	--clr-bg: hsl(32, 100%, 97%);
 
 	--bg: radial-gradient(hsl(0 0% 98%), var(--clr-bg));
 	--bg-opacity: 0.6;
