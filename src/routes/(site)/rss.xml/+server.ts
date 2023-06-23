@@ -24,7 +24,7 @@ const render = (posts: Post[]): string => `<?xml version="1.0" encoding="UTF-8" 
 <title>${siteConfig.title}</title>
 <description>${siteConfig.description}</description>
 <link>${siteConfig.url}</link>
-<atom:link href="https://${siteConfig.url}" rel="self" type="application/rss+xml"/>
+<atom:link href="https://${siteConfig.url}/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `<item>
