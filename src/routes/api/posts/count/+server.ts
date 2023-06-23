@@ -1,8 +1,10 @@
 import { json } from '@sveltejs/kit';
 
-export const GET = async (): Promise<Response> => {
-	const posts = import.meta.glob(`/src/lib/content/posts/*.md`);
+import fetchPosts from '$lib/utils/fetchPosts.js';
 
-	const total = Object.keys(posts).length;
+export const GET = async (): Promise<Response> => {
+	const posts = await fetchPosts({ limit: -1 });
+	const total = posts.length;
+
 	return json({ total });
 };
