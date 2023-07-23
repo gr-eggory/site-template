@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
 	import type Post from '$lib/types/post';
-	// import Sidebar from '$lib/components/Sidebar.svelte';
-	// import { prefersReducedData } from '$lib/assets/js/utils';
+	import Sidebar from '$lib/components/Sidebar/Sidebar.svelte';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 
@@ -19,13 +18,14 @@
 	// });
 </script>
 
-<div class="layout-grid">
-	<!-- <div class="sidebar-wrapper">
-		<Sidebar {popularPosts} {allCategories} />
-	</div> -->
+<div class="layout">
+	<Sidebar {popularPosts} {allCategories} />
 
 	<slot />
 </div>
 
 <style lang="scss">
+	.layout {
+		display: flex;
+	}
 </style>
