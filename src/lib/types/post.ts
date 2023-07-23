@@ -19,3 +19,8 @@ export type Frontmatter = {
 	date: string;
 	published: string;
 };
+
+export type Tag = {
+	title: string;
+	slug: string;
+};
