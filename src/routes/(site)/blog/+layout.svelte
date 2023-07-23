@@ -27,5 +27,6 @@
 <style lang="scss">
 	.layout {
 		display: flex;
+		gap: var(--spacing-24);
 	}
 </style>
