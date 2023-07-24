@@ -10,7 +10,7 @@
 </script>
 
 <aside>
-	<h2>Categories</h2>
+	<h2><a href="/blog/category">Categories</a></h2>
 	<ul>
 		{#each allCategories as category}
 			<li>
