@@ -4,6 +4,7 @@
 	import Sidebar from '$lib/components/Sidebar/Sidebar.svelte';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import Transition from '$lib/components/Transition/Transition.svelte';
 
 	export let data: LayoutData;
 	let popularPosts: LayoutData['popularPosts'];
@@ -21,7 +22,9 @@
 <div class="layout">
 	<Sidebar {popularPosts} {allCategories} />
 
-	<slot />
+	<Transition url={data.currentUrl}>
+		<slot />
+	</Transition>
 </div>
 
 <style lang="scss">
