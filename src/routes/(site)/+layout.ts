@@ -1,5 +1,5 @@
 // export const prerender = true;
 
 export const load = async ({ url }) => ({
-	currentUrl: url.pathname as string,
+	currentUrl: url.pathname,
 });
