@@ -3,6 +3,8 @@
 	import type { FlyParams } from 'svelte/transition';
 
 	import { theme, toggleTheme } from '$lib/store';
+	import Sun from './icons/sun.svelte';
+	import Moon from './icons/moon.svelte';
 
 	const myFly: FlyParams = { y: 10 };
 </script>
@@ -10,13 +12,11 @@
 <button on:click={toggleTheme} aria-label="Toggle theme">
 	{#if $theme === 'dark'}
 		<div in:fly={myFly}>
-			<!-- sun icon -->
-			<span>Dark</span>
+			<Moon />
 		</div>
 	{:else}
 		<div in:fly={myFly}>
-			<!-- moon icon -->
-			<span>Light</span>
+			<Sun />
 		</div>
 	{/if}
 </button>
@@ -29,6 +29,7 @@
 		border: none;
 		box-shadow: none;
 		overflow: hidden;
+		width: 3rem;
 	}
 	button > * {
 		display: flex;
