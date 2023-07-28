@@ -13,6 +13,10 @@
 </li>
 
 <style>
+	a {
+		font-size: var(--font-24);
+	}
+
 	.active {
 		text-decoration: underline;
 	}
