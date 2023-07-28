@@ -6,33 +6,50 @@
 
 <header>
 	<nav>
-		<a href="/">
-			<h3 class="site-name">{siteConfig.title}</h3>
-		</a>
-		<LightModeToggle />
-		<ul>
-			{#each navItems as { route, title } (route)}
-				<NavItem href={route}>{title}</NavItem>
-			{/each}
-		</ul>
+		<div class="upper">
+			<a href="/" class="site-name">
+				<h3>{siteConfig.title}</h3>
+			</a>
+			<LightModeToggle />
+		</div>
+		<div class="lower">
+			<ul>
+				{#each navItems as { route, title } (route)}
+					<NavItem href={route}>{title}</NavItem>
+				{/each}
+			</ul>
+		</div>
 	</nav>
 </header>
 
-<style>
+<style lang="scss">
 	header {
-		padding: var(--spacing-16);
-	}
-	nav {
-		display: flex;
-		justify-content: space-between;
-	}
+		padding: var(--spacing-24);
 
-	.site-name {
-		color: var(--clr-primary);
-	}
+		nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: var(--spacing-16);
 
-	ul {
-		display: flex;
-		gap: 2rem;
+			.site-name {
+				font-size: var(--font-32);
+			}
+
+			.upper {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.lower {
+				display: flex;
+				justify-content: space-between;
+
+				ul {
+					display: flex;
+					gap: 2rem;
+				}
+			}
+		}
 	}
 </style>
